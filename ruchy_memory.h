@@ -203,6 +203,3 @@ void wyswietlanie(char odkryte_pola[][4], char tab_mem[][4]) {
 		cout << "\n";
 	}
 }
-
-
-
