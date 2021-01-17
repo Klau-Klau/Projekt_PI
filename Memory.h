@@ -9,13 +9,18 @@
 using namespace std;
 
 void plansza();
+void ruchy();
+void tablica_wynikow_memory();
+void ruchy_komp();
+void wyswietlanie();
 
 
-int pocz_memory() {
+void pocz_memory() {
 
 	plansza();
 
 	cout << "KONIEC" << endl;
+	Sleep(3000);
 
-	return 0;
+	
 }
