@@ -15,6 +15,7 @@ void plansza() {
 	// wymiary planszy 4x4
 
 	char tab_mem[4][4];
+	int wolne_pola[16];
 
 	for (int i = 0; i < 4; i++)
 		for (int j = 0; j < 4; j++) {
@@ -97,21 +98,20 @@ void plansza() {
 		}
 		cout << "\n";
 	}
+	
 	ruchy(tab_mem, tab_mem_znak, tab_pole, odkryte_pola, wolne_pola);
 }
 
 void tablica_wynikow_memory(int& pkt_g, int& pkt_k)
 {
-	cout << "uzytkownik: " << pkt_g << " komputer: " << pkt_k << endl;
+	cout << "uzytkownik: " << pkt_g << " myÅ›liciel: " << pkt_k << endl;
 	if (pkt_g > pkt_k) {
-		cout << "WYGRYWA U¯YTKOWNIK!" << endl;
-		licznik_fun();
-		Sleep(4000);
+		cout << "WYGRYWA UÅ»YTKOWNIK!" << endl;
 	}
 	if (pkt_g < pkt_k) {
-		cout << "WYGRYWA MYŒLICIEL!" << endl;
+		cout << "WYGRYWA MYÅšLICIEL!" << endl;
 		przegrana();
-		Sleep(4000);
+		Sleep(500);
 	}
 	if (pkt_g == pkt_k) cout << "REMIS!" << endl;
 
