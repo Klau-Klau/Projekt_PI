@@ -1,4 +1,3 @@
-﻿//#include"Zabezpieczenia.h"
 #include <iostream>
 #include <cstdio>
 #include <ctime>
@@ -16,6 +15,8 @@
 #include "ruchy_memory.h"
 
 using namespace std;
+
+void pocz_memory();
 
 class User
 {
@@ -101,7 +102,7 @@ void menu() {
             cin >> odp;
             if (odp == "nie") break;
 
-            cout << "Oto twoje pierwsze zadanie. Spotkałeś na swojej drodze surowego profesora. Przygotowane przez niego pytania na egzamin są chyba z kosmosu. Dostajesz jednak szansę."<<endl<<"Jeżeli wygrasz z nim w „kółko i krzyżyk” unikniesz pisania egzaminu, a twoja ocena wyniesie 5.0. Czy jesteś gotowy? Ta misja będzie wymagać od Ciebie sprytu i szczęścia. Niech moc będzie z Tobą! Powodzenia!" << endl;
+            cout << "Oto twoje pierwsze zadanie. Spotkałeś na swojej drodze surowego profesora. Ten człowiek jest sprawcą dzikich jęków studentów."<<endl<<"Nieszczęśnicy którzy spotkali go na swojej drodze szybko odczuwają piętno swoich zaniedbań matematycznych ze szkoły średniej. Przygotowane przez niego pytania na egzamin są chyba z kosmosu."<<endl<<"Strzeż się gdyż nigdy nie wiesz kiedy zostaniesz zaatakowany całką nieoznaczoną. Szczęście sprzyja jednak głupcom, więc dostajesz jednak szansę."<<endl<<"Jeżeli wygrasz z nim w „kółko i krzyżyk” unikniesz pisania egzaminu, a twoja ocena wyniesie 5.0. Czy jesteś gotowy? Ta misja będzie wymagać od Ciebie sprytu i szczęścia. Niech moc będzie z Tobą! Powodzenia!" << endl;
             Sleep(5000);
             cout << endl;
 
@@ -118,7 +119,7 @@ void menu() {
             Sleep(5000);
             cout << endl;
 
-            //porażka = 1;
+            porażka = 1;
             pocz_papier();
             system("cls");
             if (porażka == 0) {
@@ -126,10 +127,11 @@ void menu() {
                 break;
             }
             else
-                cout << "WOW :O Gratulacje! Kolejną misją jest gra w „memory”. Twój przeciwnik to starożytny myśliciel. Może da Ci fory. Jeśli nie… - (x_x)-> Ale trzeba być dobrej myśli. Wygrana to dodatkowy czas na naukę."<<endl<<"Otrzymasz zmieniacz czasu, będziesz mógł go jednak wykorzystać tylko raz.Powodzenia przyjacielu." << endl;
+                cout << "WOW :O Gratulacje! Kolejną misją jest gra w „memory”. Twój przeciwnik to starożytny myśliciel. Wita cię swoim donośnym ,,Witam Psze Państwa” i już wiesz, że masz do czynienia z  jednostką wybitną."<<endl<<"W oddali słyszysz tykanie tysiąca zegarów, nie napawa nas to optymizmem co do Twojej przyszłej drogi, ale może ów mędrzec okaże litość nad biednym studentem."<<endl<<"Bądź ostrożny i życzymy ci powodzenia co do Twojej przyszłości. Niech szczęście będzie z Tobą!" << endl;
             Sleep(5000);
             cout << endl;
 
+            porażka = 1;
             pocz_memory();
             system("cls");
             if (porażka == 0) {
@@ -141,6 +143,7 @@ void menu() {
             Sleep(5000);
             cout << endl;
 
+            porażka = 1;
             pocz_totolotek();
             system("cls");
             if (porażka == 0) {
@@ -158,9 +161,8 @@ void menu() {
         if (stan == 0) {
 
             cout << "Wyjście z programu";
-            break;
         }
-
+        break;
     }
 }
 
